@@ -1,0 +1,16 @@
+<section class="container">
+  <div id="content" class="span-12 last">
+    <ul>      
+        <% @searchbars.each do |bar| %>
+          <li>
+              <%= form_tag("/search", :method => "get") do %>
+                <%= label_tag 'keyword', bar.name %>
+                <%= text_field_tag('keyword', nil, :size => 20, 
+                                   :placeholder => '请输入要搜索的内容') %>
+                <%= submit_tag "Search" %>
+            <% end %>
+          </li>
+        <% end %>
+    </ul>
+  </div>
+</section>
