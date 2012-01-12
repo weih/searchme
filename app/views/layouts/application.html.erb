@@ -8,6 +8,25 @@
 </head>
 <body>
   <div id="page">
+    <header>
+      <div class="container">
+        <div id="title" class="span-5">
+          <h1>达拉然图书馆</h1>
+        </div>
+        <div id="welcome" class="span-7 last">
+          <ul>
+            <li><%= link_to "Log in", "login", :class => "rounder" %></li>
+            <li><%= link_to "Registration", 'signup', :class => "rounder" %></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <% if flash[:notice] %>
+      <p class="notice"><%= notice %></p>
+    <% end %>
+    <% if flash[:alert] %>
+      <p class="alert"><%= alert %></p>
+    <% end %>
 		<%= yield %>
 	</div>
 </body>

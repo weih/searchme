@@ -1,7 +1,12 @@
 Startpage::Application.routes.draw do
-  
+  get  "login" => "sessions#new", :as => "log_in"
+  get "signup" => "users#new", :as => "sign_up"  
   root :to => 'page#home'
+  resources :users
+  resources :sessions
   match 'search' => 'page#search', :as => :searchbar
+  
+   
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

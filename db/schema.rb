@@ -11,11 +11,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120107022651) do
+ActiveRecord::Schema.define(:version => 20120111162323) do
 
   create_table "searchbars", :force => true do |t|
     t.string   "name"
     t.string   "searchurl"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users", :force => true do |t|
+    t.string   "email"
+    t.string   "password_hash"
+    t.string   "password_salt"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
