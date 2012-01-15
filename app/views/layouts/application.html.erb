@@ -11,7 +11,9 @@
     <header>
       <div class="container">
         <div id="title" class="span-5">
-          <h1>达拉然图书馆</h1>
+          <%= link_to root_path do %>
+            <%= image_tag "home.jpg", :height => 200 %>
+          <% end %>
         </div>
         <div id="welcome" class="span-7 last">
           <ul>
@@ -34,5 +36,15 @@
     <% end %>
 		<%= yield %>
 	</div>
+	<div class="container">
+	  <footer>
+      <div id="footer" class="container">
+        <div id="devby">100% homemade by @willmouse with <%= link_to "Rails", "http://www.rubyonrails.com" %></div>
+        <div class="span-6 last">
+        </div>
+      </div>
+    </footer>
+    <%= debug(params) if Rails.env.development? %>
+  </div>
 </body>
 </html>

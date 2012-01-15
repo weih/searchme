@@ -1,19 +1,19 @@
-<p>Registration for Searchbar</p>
-
-<%= form_for @user do |f| %>
-<p>
-  <%= f.label :email %>
-  <%= f.text_field :email %>
-</p>
-<p>
-  <%= f.label :password %>
-  <%= f.password_field :password %>
-</p>
-<p>
-  <%= f.label :password_confirmation %>
-  <%= f.password_field :password_confirmation %>
-</p>
-<p>
-  <%= f.submit %>
-</p>
-<% end %>
+<div class="container">
+  <%= form_for @user do |f| %>
+  <p>
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+  </p>
+  <p>
+    <%= f.label :password, 'Password(真不是明文-_-!)' %>
+    <%= f.password_field :password %>
+  </p>
+  <p>
+    <%= f.label :password_confirmation %>
+    <%= f.password_field :password_confirmation %>
+  </p>
+  <p>
+    <%= f.submit "注册" %>
+  </p>
+  <% end %>
+</div>

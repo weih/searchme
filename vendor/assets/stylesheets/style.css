@@ -1,5 +1,17 @@
 body {
-    background: #DDD; 
+  background: url("doodle.jpg") repeat scroll 0 0 #DDD; 		
+}
+
+#page {
+	width: 700px;
+	margin: 0 auto;
+	background: #DDD;
+	margin-top: 20px;
+	padding: 20px;
+	padding-right: 50px;
+  border-radius: 20px;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;	
 }
 
 header {
@@ -8,6 +20,10 @@ header {
 
 #content ul li {
   list-style: none;
+}
+
+#welcome {
+	
 }
 
 #welcome a {
@@ -43,6 +59,7 @@ header {
 
 form {
   color: #666;
+	display: inline;
 }
 
 
@@ -57,7 +74,7 @@ label {
   font-weight: 300;
 }
 
-input[type="text"] {
+input[type="text"], input[type="password"] {
   background-color: #EFEFEF;
   border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -69,6 +86,16 @@ input[type="text"] {
   font-weight: 300;
   color: #666;
 }
+
+#searchbar_name {
+	width: 100px;
+}
+
+#searchbar_searchurl {
+	width: 270px;
+}
+
+
 
 input[type="submit"] {
   padding: 7px 10px;
@@ -84,14 +111,54 @@ input[type="submit"] {
 	cursor: pointer;
 }
 
+input[type="submit"]#add {
+	background-color: #1B7E41;
+}
+
+input[type="submit"]#delete {
+	background-color: #A0110F;
+}
+
+input[type="submit"]:hover {
+	background-color: #42423E;
+}
+
+input[type="submit"]#add:hover {
+	background-color: #299930;
+}
+
+input[type="submit"]#delete:hover {
+	background-color: #D31717;
+}
+
 footer {
-  margin-top: 20px;
+  margin-top: 5px;
   padding: 0 0 5px 0;
   font-size: 12px;
 }
 
-footer #tech p{
+footer #devby {
+	font-weight: bold;
+	float: right;
+}
+
+footer #devby a {
+	text-decoration: none;
+	color: #3E58C3;
+}
+
+footer #devby a:hover {
+	text-decoration: none;
+	color: #997535;
+}
+
+footer #tech {
   float: right;
+}
+
+footer img#tech {
+	width: 50px;
+	height: 50px;
 }
 
 .rounder {

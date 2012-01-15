@@ -1,12 +1,18 @@
 Startpage::Application.routes.draw do
+  get "searchbars/create"
+
+  get "searchbars/destroy"
+
   get "login" => "sessions#new", :as => "log_in"
   get "signup" => "users#new", :as => "sign_up"  
   get "logout" => "sessions#destroy", :as => "log_out"
   root :to => 'page#home'
   resources :users
   resources :sessions
+  resources :searchbars
   match 'search' => 'page#search', :as => :searchbar
-  
+  match 'destroy' => 'searchbars#destroy'
+  match 'usage' => 'page#usage', :as => :usage
    
   # The priority is based upon order of creation:
   # first created -> highest priority.
