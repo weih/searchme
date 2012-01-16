@@ -1,28 +1,18 @@
 <section class="container">
   <div id="content" class="span-12 last">
-    <% if current_user %>
-    <ul>      
-      <% @searchbars.each do |bar| %>
-        <li>
-          <%= form_tag("/search", :method => "get") do %>
-            <%= label_tag bar.name %>
-            <%= hidden_field_tag 'id', bar.id %>
-            <%= text_field_tag("keyword", nil, 
-                              :placeholder => '请输入要搜索的内容') %>
-            <%= submit_tag "Search", :name => nil %>
-          <% end %>
-          <%= form_tag("/destroy", :method => "delete") do %>
-            <%= hidden_field_tag 'id', bar.id %>
-            <%= submit_tag "Delete", :name => nil, :id => "delete" %>
-          <% end %>
-        </li>
+    <div id="userbar">
+      <% if current_user %>
+        <ul>
+          <span id="edit">Edit</span>
+          <%= render :partial => "bars" %>
+          <span id="swap">Add</div>
+            <%= form_for @newbar do |f| %>
+              <%= f.text_field :name, :placeholder =>"名称" %>
+              <%= f.text_field :searchurl, :placeholder =>"URL地址" %>
+              <%= submit_tag "OK", :name => nil, :id => "add" %>
+            <% end %>
+        </ul>
       <% end %>
-        <%= form_for @newbar do |f| %>
-          <%= f.text_field :name, :placeholder =>"名称" %>
-          <%= f.text_field :searchurl, :placeholder =>"URL地址" %>
-          <%= submit_tag "Add", :name => nil, :id => "add" %>
-        <% end %>
-      <% end %>
-    </ul>
+    </div>
   </div>
 </section>

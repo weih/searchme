@@ -1,0 +1,17 @@
+<div id="searchbars">
+  <% @searchbars.each do |bar| %>
+    <li>
+      <%= form_tag("/search", :method => "get") do %>
+        <%= label_tag bar.name %>
+        <%= hidden_field_tag 'id', bar.id %>
+        <%= text_field_tag("keyword", nil, 
+                          :placeholder => '请输入要搜索的内容') %>
+        <%= submit_tag "Search", :name => nil %>
+      <% end %>
+      <%= form_tag("/destroy", :method => "delete", :class => 'destroy') do %>
+        <%= hidden_field_tag 'id', bar.id %>
+        <%= submit_tag "Delete", :name => nil, :id => "delete" %>
+      <% end %>
+    </li>
+  <% end %>
+</div>

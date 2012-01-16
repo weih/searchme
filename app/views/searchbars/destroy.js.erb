@@ -1,0 +1,5 @@
+<% @user = current_user %>
+<% @searchbars = @user.searchbars %>
+<% @newbar = Searchbar.new %>
+$("#searchbars").html("<%= escape_javascript(render(:partial => "page/bars")) %>");
+$('.destroy').show();

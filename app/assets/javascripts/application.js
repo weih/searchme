@@ -7,3 +7,32 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+jQuery.ajaxSetup({ 
+  'beforeSend': function(xhr) {xhr.setRequestHeader("Accept", "text/javascript")}
+})
+
+jQuery.fn.submitWithAjax = function() {
+	this.submit(function() {
+		$.post($(this).attr("action"), $(this).serialize(), null, "script");
+		return false;		
+	})
+	return this;
+}
+
+$(document).ready(function() {
+	$('#swap').click(function() {
+		$('#swap').hide();
+		$('#new_searchbar').show('fast');
+	})
+	$('#edit').toggle(
+		function(){
+			$('.destroy').show('slow');
+		},
+		function(){
+			$('.destroy').hide();			
+		}
+	)
+	$('#new_searchbar').submitWithAjax();
+	$('.destroy').submitWithAjax();
+})
