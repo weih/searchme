@@ -1,2 +1,10 @@
-<%= render :partial => "content" %>
-<%= render :partial => "footer" %>
+<div id="userbar">
+  <% if current_user %>
+    <ul>
+      <span id="edit">Edit</span>
+      <%= render :partial => "bars" %>
+      <span id="swap">Add</div>
+      <%= render :partial => "newbar" %>
+    </ul>
+  <% end %>
+</div>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>家酿酒俱乐部</title>
+  <%= stylesheet_link_tag    "application", "screen", "style_new" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div id="wrapper">
+    <div id="header" class="clearfix">
+      <div id="title">
+        <h1>家酿酒俱乐部</h1>
+        <p>这里是一个搜索聚合网站，注册之后便可定制自己的搜索聚合以及侧边栏图片，赶快试试吧！</p>
+      </div>
+      <div id="menu">
+        <ul>
+          <% if current_user %>
+            <li><%= current_user.email %></li>
+            <li><%= link_to "Log out", log_out_path, :class => "rounder" %></li>
+          <% else %>
+            <li><%= link_to "登入", log_in_path, :class => "rounder" %></li>
+            <li><%= link_to "注册", sign_up_path, :class => "rounder" %></li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+    <div id="sidebar">
+      <%= image_tag "onion.jpg" %>
+    </div>
+    <div id="content">
+      <%= yield %>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <div id="footer">
+    <p>100% homemade by <%= link_to "@willmouse", "http://twitter.com/willmouse", :target => "_blank" %></p>
+    <%= link_to "http://www.rubyonrails.com", :target => "_blank" do %>
+      <%= image_tag "ror_logo.png" %>
+    <% end %>
+    <div class="clear"></div>
+  </div>
+</body>
+</html>

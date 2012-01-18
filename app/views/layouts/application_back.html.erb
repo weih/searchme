@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>家酿酒俱乐部</title>
+  <%= stylesheet_link_tag    "application", "screen", "style" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div id="page">
+    <header>
+      <div class="container">
+        <div id="title" class="span-5">
+          <%= link_to root_path do %>
+            <%= image_tag "home.jpg", :height => 200 %>
+          <% end %>
+        </div>
+        <div id="welcome" class="span-7 last">
+          <ul>
+            <% if current_user %>
+              <li><%= current_user.email %></li>
+              <li><%= link_to "Log out", log_out_path, :class => "rounder" %></li>
+            <% else %>
+              <li><%= link_to "Log in", log_in_path, :class => "rounder" %></li>
+              <li><%= link_to "Registration", sign_up_path, :class => "rounder" %></li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <% if flash[:notice] %>
+      <p class="notice container rounder"><%= notice %></p>
+    <% end %>
+    <% if flash[:alert] %>
+      <p class="alert container rounder"><%= alert %></p>
+    <% end %>
+		<%= yield %>
+	</div>
+	<div class="container">
+	  <footer>
+      <div id="footer" class="container">
+        <div id="devby">100% homemade by @willmouse with <%= link_to "Rails", "http://www.rubyonrails.com" %></div>
+        <div class="span-6 last">
+        </div>
+      </div>
+    </footer>
+    <%= debug(params) if Rails.env.development? %>
+  </div>
+</body>
+</html>

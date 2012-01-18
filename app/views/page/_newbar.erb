@@ -1,0 +1,6 @@
+<%= form_for @newbar do |f| %>
+  <%= f.text_field :name, :placeholder =>"名称" %>
+  <br />
+  <%= f.text_field :searchurl, :placeholder =>"URL地址" %>
+  <%= submit_tag "OK", :name => nil, :id => "add" %>
+<% end %>

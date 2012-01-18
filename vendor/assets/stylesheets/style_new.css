@@ -1,0 +1,188 @@
+body {
+  background: url("doodle.jpg") repeat scroll 0 0 #DDD; 		
+	width: 820px;
+	margin: 0 auto;
+}
+
+a {
+	text-decoration: none;
+}
+
+#wrapper {
+	background: white;
+	float: left;
+	margin-top: 20px;
+	border: solid 2px gray;
+}
+
+#header {
+	border-bottom: solid 2px gray;
+}
+
+#menu {
+	margin: 20px 100px 0 0;
+}
+
+#menu a {
+	font-size: 1.2em;
+  font-weight: 900;
+  text-decoration: none;
+  color: white;
+  background-color: #333;
+  letter-spacing: 1px;
+  margin: 0 10px;
+  padding: 10px 20px;
+}
+
+#menu ul {
+  float: right;
+  list-style: none;
+  margin: 0;
+}
+
+#menu ul li {
+  float: left;
+  margin: 0 5px;
+}
+
+#title {
+	float: left;
+	width: 400px;
+}
+
+#sidebar {
+	width: 344px;
+	float: left;
+	border-right: solid 2px gray;
+}
+
+#content {
+	width: 450px;
+	float: left;
+	padding: 20px 5px 10px 15px;
+}
+
+#content ul {
+  margin: 0;
+  padding-left: 0;
+}
+
+#content ul li {
+	list-style: none;
+  margin: 0 10px 10px 0;
+}
+
+form {
+  color: #666;
+	display: inline;
+}
+
+
+input[type="submit"], input[type="text"], label {
+  font-family: museo-sans,"Helvetica Neue",Helvetica,Geneva,Verdana,Arial,sans-serif;
+  font-size: 12px;
+}
+
+label {
+  font-size: 18px;
+  display: block;
+  font-weight: 300;
+	margin-bottom: -2px;
+}
+
+input[type="text"], input[type="password"] {
+  background-color: #EFEFEF;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  padding: 5px;
+  width: 270px;
+  border: 2px solid #CCC;
+  margin: 0;
+  font-weight: 300;
+  color: #666;
+}
+
+.destroy {
+	display: none;
+}
+
+#searchbar_name {
+	width: 100px;
+}
+
+#searchbar_searchurl {
+	width: 270px;
+}
+
+input[type="submit"], #swap, #edit {
+  padding: 7px 10px;
+  font-weight: 900;
+	font-family: sans-serif;
+  color: white;
+  background-color: #333;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border: none;
+  letter-spacing: 1px;
+	cursor: pointer;
+}
+
+#new_searchbar {
+	display: none;
+}
+
+#edit {
+	background-color: #D8D145;
+}
+
+#swap {
+	position: relative;
+}
+
+#searchbars {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+input[type="submit"]#add, #swap {
+	background-color: #1B7E41;
+}
+
+input[type="submit"]#delete {
+	background-color: #A0110F;
+}
+
+input[type="submit"]:hover {
+	background-color: #42423E;
+}
+
+input[type="submit"]#add:hover {
+	background-color: #299930;
+}
+
+input[type="submit"]#delete:hover {
+	background-color: #D31717;
+}
+
+#footer {
+	margin: 5px 0 15px 0;
+}
+
+#footer p {
+	float: left;
+}
+
+#footer img {
+	margin: 0;
+	height: 50px;
+	width: 50px;
+	float: right;
+}
+
+.rounder {
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
