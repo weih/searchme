@@ -18,7 +18,7 @@ jQuery.fn.submitWithAjax = function() {
 		return false;		
 	})
 	return this;
-}
+};
 
 $(document).ready(function() {
 	$('#swap').click(function() {

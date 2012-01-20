@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>极客的任意门</title>
+  <title>家酿酒俱乐部</title>
   <%= stylesheet_link_tag    "application", "screen", "style_new" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
@@ -20,25 +20,11 @@
   <div class="clear"></div>
   </div>
   <div id="wrapper">
-    <% unless current_user %>
-    <div id="header" class="clearfix">
-      <div id="slogen">
-        <p>这里是一个搜索聚合网站，注册之后便可定制自己的搜索聚合以及侧边栏图片，赶快试试吧！</p>
-      </div>
-    </div>
-    <% end %>
-    <div id="sidebar">
-      <%= image_tag "onion.jpg" %>
-    </div>
-    <div id="content">
+    <div class="special">
       <%= yield %>
     </div>
-    <div class="clear"></div>
   </div>
   <div id="footer">
-    <%= link_to about_path, do %>
-      <span>About</span>
-    <% end %>
     <p>100% homemade by <%= link_to "@willmouse", "http://twitter.com/willmouse", :target => "_blank" %></p>
     <div class="clear"></div>
   </div>

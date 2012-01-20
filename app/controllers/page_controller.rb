@@ -2,8 +2,10 @@ require "erb"
 include ERB::Util
 
 class PageController < ApplicationController
+  #layout "application", :except => [:usage]
+    
   def home
-    @user = current_user
+    @user = current_user || User.new
     if @user.nil?
       @searchbars = nil
     else
@@ -18,7 +20,11 @@ class PageController < ApplicationController
   end
   
   def usage
-    
+    render :layout => "others"
+  end
+  
+  def about
+    render :layout => "others"
   end
   
   protected

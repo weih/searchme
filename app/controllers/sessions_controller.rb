@@ -1,5 +1,6 @@
 class SessionsController < ApplicationController
   def new
+    render :layout => "others"
   end
   
   def create

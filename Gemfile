@@ -14,6 +14,8 @@ gem 'guard-livereload'
 gem 'bcrypt-ruby', :require => 'bcrypt'
 # gem 'devise', '2.0.0.rc'
 
+gem 'gravatar_image_tag'
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

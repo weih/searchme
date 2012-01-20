@@ -6,5 +6,10 @@
       <span id="swap">Add</div>
       <%= render :partial => "newbar" %>
     </ul>
+  <% else %>
+    <% @searchbars =  User.find(1).searchbars%>
+    <ul>
+      <%= render :partial => "bars", :locals => { :searchbars => @searchbars} %>
+    </ul>
   <% end %>
 </div>

@@ -1,4 +1,5 @@
 body {
+	font-family: "Helvetica Neue";
   background: url("doodle.jpg") repeat scroll 0 0 #DDD; 		
 	width: 820px;
 	margin: 0 auto;
@@ -6,12 +7,21 @@ body {
 
 a {
 	text-decoration: none;
+  color: #993747;
+}
+
+a:hover {
+	color: #96995B;
+}
+
+ul {
+	list-style: none;
 }
 
 #wrapper {
+	width: 820px;
 	background: white;
 	float: left;
-	margin-top: 20px;
 	border: solid 2px gray;
 }
 
@@ -19,19 +29,12 @@ a {
 	border-bottom: solid 2px gray;
 }
 
-#menu {
-	margin: 20px 100px 0 0;
+#title {
+	font-size: 2em;
 }
 
-#menu a {
-	font-size: 1.2em;
-  font-weight: 900;
-  text-decoration: none;
-  color: white;
-  background-color: #333;
-  letter-spacing: 1px;
-  margin: 0 10px;
-  padding: 10px 20px;
+#menu {
+	margin: 20px 0 0 0;
 }
 
 #menu ul {
@@ -40,12 +43,20 @@ a {
   margin: 0;
 }
 
+#menu ul a {
+	font-size: 1.2em;
+  font-weight: 900;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
 #menu ul li {
   float: left;
   margin: 0 5px;
 }
 
-#title {
+#slogen {
+	margin: 15px;
 	float: left;
 	width: 400px;
 }
@@ -68,8 +79,15 @@ a {
 }
 
 #content ul li {
-	list-style: none;
   margin: 0 10px 10px 0;
+}
+
+#user_menu {
+	float: right;
+}
+
+#user_menu ul li{
+	float: left;
 }
 
 form {
@@ -79,7 +97,7 @@ form {
 
 
 input[type="submit"], input[type="text"], label {
-  font-family: museo-sans,"Helvetica Neue",Helvetica,Geneva,Verdana,Arial,sans-serif;
+  font-family: "Helvetica Neue",Helvetica,Geneva,Verdana,Arial,sans-serif;
   font-size: 12px;
 }
 
@@ -168,10 +186,15 @@ input[type="submit"]#delete:hover {
 
 #footer {
 	margin: 5px 0 15px 0;
+	font-weight: bold;
+}
+
+#footer span {
+	margin: 0 0 0 2px;
 }
 
 #footer p {
-	float: left;
+	float: right;
 }
 
 #footer img {
@@ -185,4 +208,12 @@ input[type="submit"]#delete:hover {
   border-radius: 5px;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
+}
+
+.special {
+	margin: 20px 50px 30px 30px;
+}
+
+.highlight {
+	background: blue;
 }

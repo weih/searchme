@@ -1,1 +1,8 @@
-alert("hoho");
+<% @user = current_user %>
+<% @searchbars = @user.searchbars %>
+<% @newbar = Searchbar.new %>
+$("#new_searchbar").hide();
+$("#new_searchbar")[0].reset();
+$("#swap").show();
+$("#searchbars").html("<%= escape_javascript(render(:partial => "page/bars")) %>");
+alert('OK');

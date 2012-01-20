@@ -13,6 +13,7 @@ Startpage::Application.routes.draw do
   match 'search' => 'page#search', :as => :searchbar
   match 'destroy' => 'searchbars#destroy'
   match 'usage' => 'page#usage', :as => :usage
+  match 'about' => 'page#about', :as => :about
    
   # The priority is based upon order of creation:
   # first created -> highest priority.

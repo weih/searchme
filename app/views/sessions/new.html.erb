@@ -1,13 +1,11 @@
-<div class="container">
-  <%= form_tag sessions_path do %>
-    <p>
-      <%= label_tag :email %>
-      <%= text_field_tag :email, params[:email] %>
-    </p>
-    <p>
-      <%= label_tag :password %>
-      <%= password_field_tag :password, params[:password] %>
-    </p>
-    <%= submit_tag "登陆"%>  
-  <% end %>
-</div>
+<%= form_tag sessions_path do %>
+  <p>
+    <%= label_tag :email %>
+    <%= text_field_tag :email, params[:email] %>
+  </p>
+  <p>
+    <%= label_tag :password %>
+    <%= password_field_tag :password, params[:password] %>
+  </p>
+  <%= submit_tag "登陆"%>  
+<% end %>

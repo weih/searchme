@@ -1,7 +1,6 @@
-<div class="container">
-  <%= form_for @user do |f| %>
+<%= form_for @user do |f| %>
   <p>
-    <%= f.label :email %>
+    <%= f.label :email, 'Email(Garvtar ON)' %>
     <%= f.text_field :email %>
   </p>
   <p>
@@ -15,5 +14,4 @@
   <p>
     <%= f.submit "注册" %>
   </p>
-  <% end %>
-</div>
+<% end %>
